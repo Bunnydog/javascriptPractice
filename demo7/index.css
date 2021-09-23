@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;   
+}
+
+
+
+.img-box{
+    width: 900px;
+    height: 600px;
+    margin: 100px auto;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.img-box img{
+    width: 800px;
+    height: 500px;
+}
+
