@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组练习</title>
+
+
+    <script>
+
+        // 初始化构造函数
+
+        function Person(name , age , gender){
+            this.name = name;
+            this.age = age;
+        }
+ 
+        // 创建实例
+        var per1 = new Person("孙悟空" , 18);
+        var per2 = new Person("猪八戒" , 8);
+        var per3 = new Person("沙和尚" , 28);
+        var per4 = new Person("唐三藏" , 38);
+        var per5 = new Person("红孩儿" , 48);
+        
+        // 将实例放入数组中
+        var perArr = [per1,per2,per3,per4,per5];
+    
+        // 创建一个函数，将18岁及以上的人提取出来，封装到新的数组中。
+
+        function getAdult(arr) { 
+
+            var adult = [];
+
+            // for(var i = 0 ; i<arr.length ; i++)
+            // {
+            //     if(arr[i].age >= 18)
+            //     {
+            //         adult.push(arr[i]);
+            //     }
+            // }
+
+            arr.forEach(element => {
+                if(element.age >= 18)
+                {
+                    adult.push(element);
+                }
+            });
+
+            return adult;
+        }
+
+        console.log(getAdult(perArr));
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
