@@ -1,0 +1,15 @@
+.photo{
+    height: 150px;
+    width: 150px;
+    background-image: url("./photo4.jpg");
+    background-size: cover;
+    background-position:0 -135px ;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: #bfc;
+}
