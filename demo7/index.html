@@ -6,50 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图片切换练习</title>
     <link rel="stylesheet" href="index.css">
-    <script>
-
-        window.onload = function () {  
-
-            //图片地址数组
-            const imgs = ["./img/1.jpg","./img/2.jpg","./img/3.jpg","./img/4.jpg","./img/5.jpg","./img/6.jpg","./img/7.jpg",]
-            var i = 0;  //默认图片索引号
-
-            //绑定按钮 0 为 上， 1为下
-            var oBtns = document.getElementsByTagName("button");
-
-            //显示图片当前索引信息
-            var oInfo = document.getElementsByClassName("info")[0];
-            oInfo.innerHTML = "一共 "+ imgs.length +" 张图片，当前是第 "+ (i+1) +" 张"
-
-            //设置点击上一张的事件
-            oBtns[0].onclick = function () {  
-                //获取图片元素
-                var oImg = document.getElementsByTagName("img")[0];
-                i--;
-                if(i<0)
-                {
-                    i = imgs.length-1;
-                }
-                oImg.src = imgs[i];
-                oInfo.innerHTML = "一共 "+ imgs.length +" 张图片，当前是第 "+ (i+1) +" 张"
-            }
-
-            //设置点击下一张的事件
-            oBtns[1].onclick = function () {  
-                //获取图片元素
-                var oImg = document.getElementsByTagName("img")[0];
-                i++;
-                if(i>imgs.length-1)
-                {
-                    i = 0;
-                }
-                oImg.src = imgs[i];
-                oInfo.innerHTML = "一共 "+ imgs.length +" 张图片，当前是第 "+ (i+1) +" 张"
-            }
-
-        }
-
-    </script>
+    <script src="./index.js"></script>
 
 </head>
 <body>
@@ -58,8 +15,10 @@
         <div class="info"></div>
         <img src="./img/1.jpg" alt="图片">
         <div class="btn">
+            <button>播放</button>
             <button>上一张</button>
             <button>下一张</button>
+            <button>停止</button>
         </div>
     </div>
     
